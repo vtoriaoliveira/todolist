@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>To do list</title>
+</head>
+<body class="">
+    <div class="conteiner">
+        <divc class="">
+            <h2>Minha To-do list </h2>
+            <input type="text"  id="task" placeholder="Digite uma tarefa">
+            <button onclick="addtask()">Adicionar</button>
+            <ul id="listatarefa">Adicione suas tarefas</ul>
+        </div>
+    </div>
+
+
+    <script>
+        function addtask() {
+            const listatarefa = document.getElementById ('task');
+            const tasktext= task.value.trim();
+            if (tasktext=== ''){
+                alert( 'por favor, digite uma tarefa');
+                return;
+            }
+
+            const li = document.createElement('li');
+            li.textContent=tasktext;
+            const completeBtn= document.createElement('button');
+            completeBtn. textContent= 'concluir'
+            completeBtn.onclick=() => li.classlist.toggle( 'completed');
+            
+            const deleteBtn = document.createElement ('button');
+            deleteBtn.textContent= 'remover';
+            deleteBtn.onclick= () => li.remove ();
+            li.appendChild(completeBtn);
+            li.appendChild(deleteBtn);
+            document.getElementById('listatarefa'). appendChild( li);
+            task.value = '';
+        
+
+
+
+        }
+
+
+
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>
